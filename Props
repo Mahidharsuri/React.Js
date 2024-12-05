@@ -1,0 +1,27 @@
+
+------------------------jsx component--------------------------
+const Name = (props)=>{
+    return(
+      <div className="data">
+        <p><u>My Name is {props.name}</u></p>
+        <p>My age is {props.age}</p>
+        <p>My village is {props.villageName}</p>
+      </div>
+    );
+}
+
+export default Name
+
+
+--------------------------------main jsx -----------------------
+import Name from "./List";
+
+const App = ()=> {
+  return(
+    <>
+    <Name name="Mahidhar" age= "21" villageName="Chinthachelika" />
+    </>
+  );
+}
+
+export default App
