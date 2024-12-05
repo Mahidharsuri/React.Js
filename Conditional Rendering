@@ -1,0 +1,37 @@
+-----------------------------jsx component--------------------------
+
+
+const Greet = (props)=>{
+
+    // if(props.isLogged){
+    //     return <h2>Welcome {props.username}</h2>
+    // }
+
+    // else{
+    //     return <h2>Bye</h2>
+     // }
+    // return <h2>Bye</h2>
+
+    // -------------terinory operator-----------------
+    return (props.isLogged ? 
+         <h2>Welcome {props.username}</h2>:
+         <h2>Please Login To Continue !</h2>
+    );
+}
+
+export default Greet
+
+------------------------------------Main jsx--------------------------------
+
+import Greet from "./my.jsx";
+
+
+const App = ()=>{
+  return(
+    <>
+    <Greet isLogged={false} username="Mahidhar Suri"/>
+    </>
+  );
+}
+
+export default App
