@@ -1,0 +1,64 @@
+import React,{useState,useEffect} from 'react'
+
+const FunctionalLifecycle = () => {
+  const [name,setName] = useState("Mahidhar");
+  const [count,setCount] = useState(0);
+  const [products,setProducts] = useState([]);
+  const [oneproduct,setOneproduct] = useState([]);
+  
+  
+
+  useEffect(()=>{
+    console.log("COMPONENT DID MOUNT")
+    return()=>{ console.log("Hello i'm from unmounting")}
+  },[])
+  // useEffect(()=>{
+  //   console.log("COMPONENT UPDATE")
+  //   return()=>{ console.log("Hello i'm from unmounting....")}
+  // },[count,name])
+
+  useEffect(()=>{
+    fetch("https://fakestoreapi.com/products").then((res)=>res.json()).then((data)=>setProducts(data)).catch((err)=>console.log(err))
+  },[])
+  console.log(products)
+
+  useEffect(()=>{
+    fetch(`https://fakestoreapi.com/products/${count}`).then((res)=>res.json()).then((data)=>setOneproduct(data)).catch((err)=>console.log(err))
+},[count])
+
+ return(
+    <div>
+      <center><h1>Welcome to This Page</h1>
+      
+      <button onClick={()=> setCount(count+1)}>INCREMENT</button>
+      <h1>{count}</h1> 
+      <h1>{oneproduct.category}</h1>
+      <p>{oneproduct.description}</p>
+      <img src={oneproduct.image} alt="" width="200px"/>
+      <h1>${oneproduct.price}</h1>
+      <h3>{oneproduct.rate}</h3>
+      
+      </center>
+    </div>
+    
+  )
+
+----------------------------App.jsx------------------------------------
+import FunctionalLifecycle from "./List.jsx"
+
+
+function App(){
+  return(
+    <>
+    <FunctionalLifecycle/>
+    </>
+  );
+}
+
+export default  App
+}
+
+
+
+
+export default FunctionalLifecycle
