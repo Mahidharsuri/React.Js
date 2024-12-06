@@ -1,0 +1,53 @@
+import List from "./List.jsx"
+
+
+
+const App = ()=>{
+  const fruits =  [{id:1, name:"Apple",      calories:95},
+                  {id:2,  name:"Pine-apple", calories:55},
+                   {id:3, name:"Banana",     calories:85},
+                   {id:4, name:"carrot",     calories:175},
+                   {id:5, name:"Jack-fruit", calories:165}];  
+
+
+  const vegitables =  [{id:6, name:"Carrot",        calories:95},
+                      {id:7,  name:"Brinjal",       calories:55},
+                      {id:8,  name:"ladies-Finger", calories:85},
+                      {id:9,  name:"Bittergaurd",   calories:175},
+                      {id:10,  name:"Drum-Strick",  calories:165}]; 
+  
+     
+    return(
+      <> 
+      <List items={fruits} category="Fruits"/>
+      <List items={vegitables} category="Vegitables"/>
+      </>
+    );
+}
+
+export default App
+
+-------------------------------------------------------------------------------------
+
+
+const List = (props) =>{
+
+   const itemList = props.items;
+   const category = props.category;
+ 
+
+   const listItems= itemList.map(item => <li key={item.id}>
+                                         {item.name}: &nbsp; 
+                                         <b>{item.calories} </b></li>)
+
+
+   return(<>
+            <h1 className="category">{category}</h1>
+            <ul className="items">{listItems}</ul>
+            
+          </>
+          
+        )
+}
+
+export default List;
