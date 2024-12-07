@@ -1,0 +1,19 @@
+.counter{
+    font-size: 10em;
+}
+.counter-button{
+    width: 150px;
+    height: 40px;
+    color: hsla(257, 74%, 46%, 0.747);
+    background-color: rgb(17, 225, 225);
+    border: none;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px black;
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, monospace;
+    
+}
+.counter-button:hover{
+    background-color: hsl(180, 86%, 43%);
+}
