@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const ApiCall = (max) => {
     const [data,setData] = useState([]);
-    const arr = ["max","ishu","janu","mahi","raj","chitti"]
+    const arr = ["max","ishu","janu","mahi","raj", "chitti"]
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts" )
       .then((response) => response.json())
