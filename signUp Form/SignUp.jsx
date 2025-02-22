@@ -24,7 +24,7 @@ const SignUp = () => {
         name="username" 
         placeholder='Please Enter username...'
         onChange={eventHandler}
-        />
+        /> 
         <br/>
         <label>Email :</label>
         <input type="text"
