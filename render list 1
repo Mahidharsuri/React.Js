@@ -4,7 +4,7 @@ import List from "./List.jsx"
 
 const App = ()=>{
   const fruits =  [{id:1, name:"Apple",      calories:95},
-                  {id:2,  name:"Pine-apple", calories:55},
+                  {id:2,  name:"Pine-apple",   calories:55},
                    {id:3, name:"Banana",     calories:85},
                    {id:4, name:"carrot",     calories:175},
                    {id:5, name:"Jack-fruit", calories:165}];  
