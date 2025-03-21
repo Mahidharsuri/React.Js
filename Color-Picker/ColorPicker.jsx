@@ -4,6 +4,7 @@ function ColorPicker(){
     const[color,setColor] = useState('#ffffff');
     function handleColorChange(event){
           setColor(event.target.value);
+        
     }
 return(
     <div className="color-picker-container">
